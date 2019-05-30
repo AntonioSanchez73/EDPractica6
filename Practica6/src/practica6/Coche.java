@@ -46,8 +46,26 @@ public class Coche {
 		return resultado;
 	}
 	
+	public String metodoA(String modelo, String fabricante)
+	{
+		return coche(modelo, fabricante) + "y gasta 1,337 euros por litro.";
+	}
+	
+	public String metodoB(String modelo, String fabricante)
+	{
+		return coche(modelo, fabricante) + "y gasta 1,052 euros por litro.";
+	}
+	
+	public String metodoC(String modelo, String fabricante)
+	{
+		return coche(modelo, fabricante) + "y no necesita combustible.";
+	}
+	
 	private String cocheMatricula() {
 		return COCHE_MATRICULA + matricula + " ";
 	}
-
+	
+	private String coche(String modelo, String fabricante) {
+		return "Es un " + fabricante + " " + modelo;
+	}
 }
